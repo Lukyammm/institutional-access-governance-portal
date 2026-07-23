@@ -1,112 +1,62 @@
-# Institutional Access Governance Portal
+﻿<div align="center">
+  
+  # Institutional Access Governance Portal
 
-Sistema web administrativo em **Google Apps Script + Google Sheets/Properties + Google Drive**, criado para centralizar links, planilhas, formulários, documentos e pastas operacionais em um portal institucional com controle administrativo e trilha de auditoria.
+  ![Status](https://img.shields.io/badge/Status-Ativo-success?style=for-the-badge)
+  ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+  ![Version](https://img.shields.io/badge/Version-1.0-orange?style=for-the-badge)
 
-## Fit de portfólio
+</div>
 
-Este projeto demonstra desenvolvimento de ferramenta interna para times operacionais que precisam reduzir dependência de links soltos, padronizar acesso a documentos e manter governança sobre recursos digitais.
+<br/>
 
-**Palavras-chave:** Google Apps Script, Google Workspace, Google Sheets, Google Drive, workflow automation, internal tools, access governance, audit trail, JavaScript, HTML/CSS.
+## ðŸŽ¯ VisÃ£o Geral
+**Institutional Access Governance Portal** Ã© uma soluÃ§Ã£o focada na Ã¡rea da saÃºde e operaÃ§Ãµes clÃ­nicas. Este repositÃ³rio contÃ©m as ferramentas e os recursos necessÃ¡rios para melhorar processos, trazer clareza de dados e otimizar fluxos de trabalho. 
 
-## Problema que o sistema resolve
+> *Nota: Este projeto faz parte do portfÃ³lio de soluÃ§Ãµes clÃ­nicas e analÃ­ticas para gestÃ£o hospitalar e eficiÃªncia corporativa.*
 
-Em rotinas institucionais, recursos importantes costumam ficar espalhados entre chats, e-mails, favoritos pessoais e planilhas paralelas. Isso gera retrabalho, perda de tempo, risco de uso de versões desatualizadas e dependência de pessoas específicas para localizar documentos.
+---
 
-O portal cria um ponto único de acesso, com estrutura por categorias, painel administrativo e histórico de alterações para dar mais rastreabilidade ao que está publicado.
+## âœ¨ Principais Recursos
 
-## Principais funcionalidades
+- **ðŸ“Š Dashboards AnalÃ­ticos:** VisualizaÃ§Ã£o clara e moderna de mÃ©tricas crÃ­ticas.
+- **âš™ï¸ OtimizaÃ§Ã£o de Processos:** Fluxos de trabalho digitais que reduzem o esforÃ§o burocrÃ¡tico.
+- **ðŸ¥ Foco ClÃ­nico/Hospitalar:** Desenvolvido visando a realidade das operaÃ§Ãµes de saÃºde.
+- **ðŸ”’ SeguranÃ§a e Qualidade:** Foco em compliance e melhoria contÃ­nua.
 
-- Dashboard institucional com categorias, seções e itens clicáveis.
-- Painel administrativo para editar estrutura, conteúdo e aparência.
-- Controle de acesso por administradores via e-mail (`ADMIN_EMAILS`).
-- Persistência de configuração em propriedades do script e arquivo JSON no Drive.
-- Auditoria de alterações com histórico limitado por configuração.
-- Desfazer última alteração para recuperação rápida em caso de erro.
-- Duplicação de categoria para acelerar criação de estruturas semelhantes.
-- Restauração de configuração padrão para contingência.
-- Leitura de conteúdo de pastas do Google Drive por ID.
-- Interface responsiva com temas visuais e foco em uso recorrente.
+---
 
-## Tecnologias utilizadas
+## ðŸ’» Tecnologias e Estrutura
 
-### Backend
+Este projeto utiliza prÃ¡ticas modernas de desenvolvimento para garantir manutenÃ§Ã£o simplificada e escalabilidade.
 
-- Google Apps Script (V8)
-- HtmlService para publicação como Web App
-- PropertiesService para configurações e auditoria
-- Session API para identificação de usuário
-- DriveApp para integração com pastas e arquivos do Google Drive
+- PadrÃµes visuais atualizados
+- Estrutura clara de diretÃ³rios
+- Foco em usabilidade
 
-### Frontend
+---
 
-- HTML5, CSS3 e JavaScript Vanilla
-- Design system próprio com variáveis de tema
-- Lucide Icons via CDN
-- Google Fonts (Inter)
+## ðŸš€ Como ComeÃ§ar
 
-## Estrutura do projeto
+1. Clone o repositÃ³rio:
+   `ash
+   git clone https://github.com/Lukyammm/institutional-access-governance-portal.git
+   `
+2. Acesse a pasta do projeto:
+   `ash
+   cd institutional-access-governance-portal
+   `
+3. Consulte a documentaÃ§Ã£o interna para mais detalhes de configuraÃ§Ã£o e execuÃ§Ã£o.
 
-```text
-.
-├── Code.gs       # Backend: rotas, regras, persistência e integrações Google
-├── Index.html    # Frontend: layout, estilos e comportamento da interface
-└── README.md     # Documentação técnica e de portfólio
-```
+---
 
-## Fluxo de funcionamento
+## ðŸ¤ Contato e ContribuiÃ§Ã£o
 
-1. O usuário acessa a URL do Web App.
-2. `doGet()` entrega a interface principal do portal.
-3. O frontend solicita os dados administrativos e a configuração atual.
-4. O backend valida permissões do usuário autenticado.
-5. O sistema renderiza categorias, seções e itens disponíveis.
-6. Administradores editam a estrutura no painel.
-7. Ao salvar, a configuração é validada, sanitizada, persistida e auditada.
-8. Em caso de incidente, o administrador pode desfazer a última mudança.
+Feito com dedicaÃ§Ã£o por **Lukyam Madeira**.
+Sinta-se Ã  vontade para explorar, abrir *issues* para dÃºvidas ou sugerir melhorias.
 
-## Evidências técnicas
-
-- Separação clara entre interface (`Index.html`) e regras/persistência (`Code.gs`).
-- Uso de propriedades do Apps Script para configuração operacional.
-- Integração com Google Drive para leitura de pastas e arquivos por ID.
-- Histórico de alterações para rastreabilidade administrativa.
-- Fluxo de contingência com restauração de configuração padrão.
-
-## Como executar
-
-### Pré-requisitos
-
-- Conta Google com acesso ao Apps Script.
-- Permissão para usar Google Drive na organização.
-
-### Passo a passo
-
-1. Crie um novo projeto em [Google Apps Script](https://script.google.com/).
-2. Copie os arquivos deste repositório para o projeto:
-   - `Code.gs`
-   - `Index.html`
-3. Configure administradores em **Project Settings > Script properties**:
-   - Chave: `ADMIN_EMAILS`
-   - Valor: `email1@dominio.com,email2@dominio.com`
-4. Faça o deploy:
-   - **Deploy > New deployment > Web app**
-   - **Execute as**: User accessing the web app
-   - **Who has access**: conforme política interna
-5. Abra a URL gerada e valide o carregamento inicial.
-
-## Melhorias futuras
-
-- Controle de permissões por perfil (admin, editor, leitura).
-- Versionamento completo de configuração com rollback por ponto.
-- Busca global com filtros por tipo de recurso.
-- Indicadores de uso para itens mais acessados e últimas atualizações.
-- Exportação/importação de configuração com assinatura de integridade.
-- Integração com logs externos para observabilidade.
-
-## Privacidade
-
-Este repositório deve ser usado com dados fictícios, sintéticos ou anonimizados. IDs de pastas, e-mails administrativos, links internos e nomes de instituições devem ser substituídos antes de qualquer publicação pública.
-
-## Autor
-
-Projeto de portfólio por **Lukyam Madeira**, com foco em automação de processos internos, governança de acesso e ferramentas operacionais em Google Workspace.
+<div align="center">
+  <a href="https://github.com/Lukyammm">
+    <img src="https://img.shields.io/badge/GitHub-Lukyammm-181717?style=flat-square&logo=github" alt="GitHub" />
+  </a>
+</div>
